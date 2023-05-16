@@ -1,13 +1,12 @@
 document.getElementById('form').addEventListener('submit', (event) => {
   event.preventDefault();
-  // document.getElementById('flight-data').innerText = '';
-  // document.getElementById('fligh-data').innerText = '';
+  
   document.getElementById('spinner-container').innerHTML = `<div id="loader"><div id="cutoff"></div></div>`
   function fetchSearch() {
-    // alert("clicked!");
+
     const flight_iata = document.getElementById("searchBox").value;
-    // flight_icao = flight_icao.toUpperCase();
-    const API_KEY = "2a88da10-282d-4600-b404-ab318baf281c";
+   
+    const API_KEY = "YOUR_API_KEY";
     fetch(
       `https://airlabs.co/api/v9/flight?flight_icao=${flight_iata}&api_key=${API_KEY}`
     )
@@ -23,10 +22,7 @@ document.getElementById('form').addEventListener('submit', (event) => {
          duration = data.response.duration;
          status = data.response.status;
          duration = (duration/60);
-         console.log(duration)
-         // console.log(duration)
          duration = String(duration)
-        // console.log(duration)
         hours = duration[0];
         minutes = duration.slice(2, 4);
         arr_time = arr_time.slice(11, 16);
@@ -52,7 +48,6 @@ document.getElementById('form').addEventListener('submit', (event) => {
           .then(res => res.json())
           .then(data => {
              const dep_name = data.response[0].name;
-            //  return arr_name
             document.getElementById('arrow-icon').style.display = 'flex';
             document.getElementById('flight-data-header').style.display = 'block';
             document.getElementById('arr-name').innerHTML = `${dep_name}`;
