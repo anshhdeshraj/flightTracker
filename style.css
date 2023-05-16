@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Open+Sans:wght@300&family=PT+Sans&family=Roboto:wght@100;300&family=Sawarabi+Gothic&display=swap');
+
+body{
+    font-family: 'Open sans', sans-serif;
+}
+input{
+    font-family: 'Open sans', sans-serif;
+}
+.header-icon{
+    height: 100px;
+    width: 100px;
+    margin-top: 4vh;
+}
+.header-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vh;
+}
+.search-container{
+    border: none;
+    display: flex;
+    margin: auto;
+    position: static;
+    border-radius: 20rem;
+    width: auto;
+    max-width: 90%;
+    transition: .3s;
+    border: .5px solid rgb(150, 148, 148);
+}
+.search-container:hover{   
+    transition: .3s;
+    box-shadow: 0 2px 7px .5px rgb(216, 215, 215);
+    background-color: rgb(247, 247, 247);
+    border: none;
+}
+.search-box{
+    border: none;
+    font-size: 17pt;
+    padding: 8px;
+    outline: none;
+    width: 87%;
+    margin-left: 2.5vw;
+    /* max-width: 90%; */
+    background: none;
+}
+
+::placeholder{
+    color: rgb(136, 135, 135);
+}
+.search-btn{
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    margin-right: 2vw;
+    cursor: pointer;
+    border-radius: 10rem;
+    width: 15vw;
+    color: black;
+    margin: 5px;
+    /* background-color: rgb(252, 252, 252); */
+    background: none;
+    border: 1px solid rgb(150, 148, 148);
+    box-shadow: 0 2px 7px .5px rgb(216, 215, 215);
+}
+.search-icon{
+    width: 20px;
+    height: 20px;
+    margin-left: 1rem;
+    margin-top: 2px;
+    transition: .3s;
+    background: none;
+}
+.search-icon:hover{
+    width: 27px;
+    height: 27px;
+    transition: .3s;
+}
+
+#loader{
+    height: 150px;
+    width: 150px;
+    background: none;
+    border-radius: 50rem;
+    border: 20px solid black;
+    margin: auto;
+    margin-top: 8vh;
+    animation-name: spinning;
+    animation-duration: 1s;
+    animation-play-state: inherit;
+    animation-iteration-count: infinite;
+    transform: rotate(20deg);
+    /* display: none; */
+    /* box-shadow: 0 2px 7px .5px rgb(216, 215, 215); */
+}
+@keyframes spinning {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+#cutoff{
+    height: 70px;
+    width: 100px;
+    background-color: rgb(252, 252, 252);
+    transform: rotate(45deg);
+}
+#error-banner{
+    height: 200px;
+    width: 200px;
+    margin: auto;
+}
+#error-container{
+    display: flex;
+    justify-content: center;
+    /* margin: auto; */
+    display: none;
+    flex-direction: column;
+    margin-top: 10vh;
+}
+#error-msg{
+    text-align: center;
+    font-size: 34pt;
+}
+#flight-data{
+    height: auto;
+    width: auto;
+    max-width: 90vw;
+    border-radius: .445rem;
+    margin: auto;
+    padding: 8px;
+    min-height: 50vh;
+    background-color: rgb(252, 252, 252);
+    box-shadow: 0 2px 7px .5px rgb(216, 215, 215);
+    margin-bottom: 8vh;
+}
+#flight-data-header{
+    /* text-decoration: underline; */
+    font-size: 32pt;
+    display: none;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+.destination{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    /* padding: 4px; */
+    border-radius: .225rem;
+    display: flex;
+    flex-direction: column;
+    /* width: 40vw; */
+    justify-content: center;
+    align-items: center;
+    /* float: right; */
+    /* justify-content: center; */
+    font-weight: 900;
+    font-size: 22pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 0px;
+    box-shadow: 0 2px 7px .5px rgb(216, 215, 215);
+    /* text-decoration: ; */
+}
+#arr-name{
+    background-color: rgb(255, 219, 58);
+}
+#dep-name{
+    background-color: rgb(46, 255, 175);
+}
+#arrow-icon{
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    display: none;
+    transform: rotate(180deg);
+}
+#status{
+    color: #fff;
+    font-size: 14pt;
+}
+#status-container{
+    display: none;
+    /* background-color: rgb(5, 201, 5); */
+    /* background-color: rgb(238, 205, 18); */
+    /* background-color: red; */
+    width: 40%;
+    text-align: center;
+    border-radius: .5rem;
+    /* padding: .1px 0; */
+    /* list-style: armenian; */
+    margin: 5px 20px;
+}
+#clock-icon{
+    height: 30px;
+    width: 30px;
+}
+#timings-container-1{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+    color: rgb(7, 161, 7);
+    display: none;
+}
+.timings{
+    font-size: 32pt;
+    padding: 0;
+    margin-left: 1vw;
+}
+.timings-heading{
+    margin-bottom: -5vh;
+    font-size: 12pt;
+}
+#timings-container-2{
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+#clock-icon{
+    margin-top: 2.2vh;
+    padding-right: 5px;
+}

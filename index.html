@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="header-container">
+      <form id="form" method="post">
+
+        <img class="header-icon" src="https://img.icons8.com/external-inipagistudio-lineal-color-inipagistudio/512/000000/external-flight-tourist-agency-inipagistudio-lineal-color-inipagistudio.png"/>
+      </div>
+      <div class="search-container">
+        <input
+        id="searchBox"
+        class="search-box"
+        type="text"
+        placeholder="flight ICAO"
+        />
+        <input type="submit" value="Find" class="search-btn">
+          <!-- <img
+          class="search-icon"
+          src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/64/000000/external-search-ui-dreamstale-lineal-dreamstale.png"
+          /> -->
+      </form>
+    </div>
+    <br /><br />
+    <div id="flight-data">
+      <div id="status-container">
+        <p id="status"></p>
+      </div>
+      <h1 id="flight-data-header"><b>Flight Info </b></h1>
+      <div id="spinner-container"></div>
+      <h3 class="destination" id="arr-name"></h3>
+      <img id="arrow-icon" src="https://img.icons8.com/fluency/512/000000/long-arrow-up.png"/>
+      <h3 class="destination" id="dep-name"></h3>
+      <div id="timings-container-1">
+        <div id="dep-time-container">
+          <h2 class="timings-heading">Scheduled Departure</h2>
+          <h3 class="timings" id="dep-time"></h3>
+        </div>
+        <div id="arr-time-container">
+          <h2 class="timings-heading">Scheduled Arrival</h2>
+          <h3 class="timings" id="arr-time"></h3>
+        </div>
+      </div>
+      <div id="timings-container-2">
+        <img id="clock-icon" src="https://img.icons8.com/external-victoruler-linear-colour-victoruler/64/000000/external-time-food-and-delivery-victoruler-linear-colour-victoruler.png"/>
+        <h3 id="duration-of-flight"></h3>
+      </div>
+    </div>
+    <div id="error-container">
+      <h1 id="error-msg">Flight not found.</h1>
+      <img id="error-banner" src="https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/512/000000/external-webpage-not-available-due-to-unknown-error-landing-tritone-tal-revivo.png"/>
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
